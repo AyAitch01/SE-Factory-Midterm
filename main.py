@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import json
-
+import json #https://www.w3schools.com/python/python_json.asp
 
 def printlist():
     print("    ***Welcome***   ")
