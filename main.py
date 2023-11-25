@@ -1,3 +1,9 @@
+import requests
+from bs4 import BeautifulSoup
+
+
+
+
 def printlist():
     print("    ***Welcome***   ")
     print('''    1. Open Tab
@@ -21,6 +27,29 @@ def open_tab():
 def close_tab():
     index = int(input("Enter the index of tab to close "))
     tabs.pop(index)
+
+# I got these library from these urls: https://pypi.org/project/beautifulsoup4/
+# https://www.tutlane.com/tutorial/python/python-requests-module#:~:text=To%20download%20and%20install%20the,the%20pip%20install%20requests%20command.&text=After%20completion%20of%20installing%20the,will%20be%20as%20shown%20below.
+def displayContent(displayURL):
+    result = requests.get("https://"+displayURL)
+    if result.status_code == 200:
+        soup = BeautifulSoup(result.content, 'lxml')
+        print(soup.prettify())
+    elif result.status_code == 404:
+        print('Not Found')
+def switch_tab():
+
+    displayIndex = int(input("Enter index to switch: "))
+    if len(tabs) == 0:
+        print("No tabs")
+    else:
+        print(tabs)
+        if 0 <= displayIndex < len(tabs):
+            displayContent(tabs[displayIndex]["URL"])
+        else:
+            displayContent(tabs[len(tabs)-1]["URL"])
+
+
 
 choice = 0
 while choice != 9:
