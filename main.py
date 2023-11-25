@@ -1,25 +1,29 @@
 def printlist():
-    print("***Welcome***")
-    print('''1. Open Tab
-2. Close Tab
-3. Switch Tab
-4. Display All Tabs
-5. Open Nested Tab
-6. Sort All Tabs
-7. Save Tabs
-8. Import Tabs
-9. Exit''')
+    print("    ***Welcome***   ")
+    print('''    1. Open Tab
+    2. Close Tab
+    3. Switch Tab
+    4. Display All Tabs
+    5. Open Nested Tab
+    6. Sort All Tabs
+    7. Save Tabs
+    8. Import Tabs
+    9. Exit''')
 
-printlist()
 tabs = [
     {"title":"" ,"URL":"" }
 ]
+def open_tab():
+    title = str(input("Enter tab title: "))
+    URL = str(input("Enter tab URL: "))
+    return title,URL
 choice = 0
 while choice != 9:
     printlist()
     choice = int(input("Choose from the above menu "))
     if choice == 1:
-        open_tab()
+        title,URL = open_tab()
+        tabs.append({"title":title,"URL":URL})
     elif choice == 2:
         close_tab()
     elif choice == 3:
