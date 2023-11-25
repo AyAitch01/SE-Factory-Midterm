@@ -72,7 +72,12 @@ def save_tabs():
     url = str(input("enter file url to save tabs to it : "))
     with open(url, 'w') as json_file:
         json.dump(tabs, json_file, indent=2)
-
+def import_tabs():
+    url = str(input("enter file url to import tabs from it : "))
+    with open(url, 'r') as json_file:
+        saved_tabs = json.load(json_file)
+        for s in saved_tabs:
+            tabs.append(s)
 choice = 0
 while choice != 9:
     printlist()
