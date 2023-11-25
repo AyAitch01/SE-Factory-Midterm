@@ -50,8 +50,13 @@ def switch_tab():
         else:
             displayContent(tabs[len(tabs)-1]["URL"])
 def display_all_tabs():
-    for n in  tabs:
-        print(n["title"])
+    for n in range(len(tabs)):
+        tab = tabs[n]["title"]
+        print(str(int(n + 1)) + f" {tab}")
+        if len(tabs[n]["nested_tabs"]) > 0:
+            for m in range(len(tabs[n]["nested_tabs"])):
+                tab2 = tabs[n]["nested_tabs"][m]
+                print("\t"+str(int((n+1)))+"."+str(int((m+1))) + f" {tab2}")
 
 def open_nested_tab():
     nestedIndex = int(input("Enter index of tab to add to it: "))
