@@ -11,3 +11,10 @@ def printlist():
 9. Exit''')
 
 printlist()
+
+choice = 0
+while(choice != 9):
+    printlist()
+    choice = int(input("Choose from the above menu "))
+
+print("Thank You!")
