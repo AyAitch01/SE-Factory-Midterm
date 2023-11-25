@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Tab 1",
+    "URL": "https://example.com/tab1",
+    "nested_tabs": [
+      {"title": "Sub-Tab 1.1", "URL": "https://example.com/subtab1.1"},
+      {"title": "Sub-Tab 1.2", "URL": "https://example.com/subtab1.2"}
+    ]
+  },
+  {
+    "title": "Tab 2",
+    "URL": "https://example.com/tab2",
+    "nested_tabs": [
+      {"title": "Sub-Tab 2.1", "URL": "https://example.com/subtab2.1"},
+      {"title": "Sub-Tab 2.2", "URL": "https://example.com/subtab2.2"}
+    ]
+  },
+  {
+    "title": "Tab 3",
+    "URL": "https://example.com/tab3",
+    "nested_tabs": []
+  }
+]

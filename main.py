@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+import json
 
 
 
@@ -68,6 +68,10 @@ def open_nested_tab():
 
 def sort_all_tabs():
     tabs.sort(key=lambda x: x['title'], reverse=False)
+def save_tabs():
+    url = str(input("enter file url to save tabs to it : "))
+    with open(url, 'w') as json_file:
+        json.dump(tabs, json_file, indent=2)
 
 choice = 0
 while choice != 9:
@@ -90,8 +94,6 @@ while choice != 9:
         save_tabs()
     elif choice == 8:
         import_tabs()
-    elif choice == 9:
-        exit_program()
     else:
         print("Invalid choice")
 print("Thank You!")
