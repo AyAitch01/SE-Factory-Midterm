@@ -13,8 +13,28 @@ def printlist():
 printlist()
 
 choice = 0
-while(choice != 9):
+while choice != 9:
     printlist()
     choice = int(input("Choose from the above menu "))
-
+    if choice == 1:
+        open_tab()
+    elif choice == 2:
+        close_tab()
+    elif choice == 3:
+        switch_tab()
+    elif choice == 4:
+        display_all_tabs()
+    elif choice == 5:
+        open_nested_tab()
+    elif choice == 6:
+        sort_all_tabs()
+    elif choice == 7:
+        save_tabs()
+    elif choice == 8:
+        import_tabs()
+    elif choice == 9:
+        exit_program()
+    else:
+        print("Invalid choice")
 print("Thank You!")
+
