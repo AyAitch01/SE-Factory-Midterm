@@ -19,6 +19,7 @@ def printlist():
 tabs = [
 
 ]
+
 def open_tab():
     title = str(input("Enter tab title: "))
     URL = str(input("Enter tab URL: "))
@@ -48,6 +49,9 @@ def switch_tab():
             displayContent(tabs[displayIndex]["URL"])
         else:
             displayContent(tabs[len(tabs)-1]["URL"])
+def display_all_tabs():
+    for n in  tabs:
+        print(n["title"])
 
 
 
@@ -57,7 +61,7 @@ while choice != 9:
     choice = int(input("Choose from the above menu "))
     if choice == 1:
         title,URL = open_tab()
-        tabs.append({"title":title,"URL":URL})
+        tabs.append({"title":title,"URL":URL,"nested_tabs":[]})
     elif choice == 2:
         close_tab()
     elif choice == 3:
