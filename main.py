@@ -11,12 +11,17 @@ def printlist():
     9. Exit''')
 
 tabs = [
-    {"title":"" ,"URL":"" }
+
 ]
 def open_tab():
     title = str(input("Enter tab title: "))
     URL = str(input("Enter tab URL: "))
     return title,URL
+
+def close_tab():
+    index = int(input("Enter the index of tab to close "))
+    tabs.pop(index)
+
 choice = 0
 while choice != 9:
     printlist()
