@@ -11,7 +11,9 @@ def printlist():
 9. Exit''')
 
 printlist()
-
+tabs = [
+    {"title":"" ,"URL":"" }
+]
 choice = 0
 while choice != 9:
     printlist()
