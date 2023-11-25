@@ -7,7 +7,7 @@ import json
 def printlist():
     print("    ***Welcome***   ")
     print('''    1. Open Tab
-    2. Close Tab
+    2. Close Tab 
     3. Switch Tab
     4. Display All Tabs
     5. Open Nested Tab
