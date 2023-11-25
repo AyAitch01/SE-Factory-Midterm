@@ -66,6 +66,9 @@ def open_nested_tab():
     tabs[nestedIndex]["nested_tabs"].append(nestedList)
     #print(tabs)
 
+def sort_all_tabs():
+    tabs.sort(key=lambda x: x['title'], reverse=False)
+
 choice = 0
 while choice != 9:
     printlist()
