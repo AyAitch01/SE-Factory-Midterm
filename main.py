@@ -53,7 +53,13 @@ def display_all_tabs():
     for n in  tabs:
         print(n["title"])
 
-
+def open_nested_tab():
+    nestedIndex = int(input("Enter index of tab to add to it: "))
+    nestedTitle = str(input("Enter tab title: "))
+    nestedURL = str(input("Enter tab URL: "))
+    nestedList = [{"title": nestedTitle, "URL": nestedURL}]
+    tabs[nestedIndex]["nested_tabs"].append(nestedList)
+    #print(tabs)
 
 choice = 0
 while choice != 9:
